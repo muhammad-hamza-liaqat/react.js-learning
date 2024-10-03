@@ -4,7 +4,10 @@ import NavBar from './components/NavBar'
 function App() {
   return (
     <>
-      <NavBar name= "express.js docs" about= "about express.js"/>
+    {/* passing default props */}
+      <NavBar />
+      {/* if want to pass custom props */}
+      {/* <NavBar name='express.js docs' about='about express.js' /> */}
     </>
   )
 }
