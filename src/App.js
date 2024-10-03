@@ -4,7 +4,7 @@ import NavBar from './components/NavBar'
 function App() {
   return (
     <>
-      <NavBar name= "express.js docs"/>
+      <NavBar name= "express.js docs" about= "about express.js"/>
     </>
   )
 }
