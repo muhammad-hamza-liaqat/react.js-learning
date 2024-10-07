@@ -5,15 +5,15 @@ export default function NavBar() {
         <>
             <nav className="navbar bg-body-tertiary">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href= {process.env.REACT_APP_URL_LOGO_HOME}>
+                    <a className="navbar-brand" href={process.env.REACT_APP_URL_LOGO_HOME}>
                         <img
-                            src="/5622.jpg"
+                            src="/favicon.ico"
                             alt="Logo"
                             width="30"
-                            height="24"
+                            height="30"
                             className="d-inline-block align-text-top"
                         />
-                        Counter App
+                        TODO
                     </a>
                 </div>
             </nav>
