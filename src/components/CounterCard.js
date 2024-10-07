@@ -12,6 +12,11 @@ export default function CounterCard() {
         console.log("substractOneHandler called")
         setCount(currentState => (currentState > 0 ? currentState - 1 : 0))
     }
+    
+    const resetHandler = () =>{
+        console.log("reset handler called");
+        setCount(0);
+    }
 
     return (
         <>
@@ -20,6 +25,7 @@ export default function CounterCard() {
                     <h3 className="card-title">{count}</h3>
                     <div className="btn btn-primary" onClick={addOneHandler}>Add by one</div>
                     <div className="btn btn-warning" onClick={subtractOneHandler}>Substract by one</div>
+                    <div className="btn btn-danger" onClick={resetHandler}>Reset</div>
                 </div>
             </div>
         </>

@@ -5,7 +5,7 @@ export default function NavBar() {
         <>
             <nav className="navbar bg-body-tertiary">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="https://google.com/">
+                    <a className="navbar-brand" href= {process.env.REACT_APP_URL_LOGO_HOME}>
                         <img
                             src="/5622.jpg"
                             alt="Logo"
