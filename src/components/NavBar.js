@@ -35,8 +35,8 @@ NavBar.propTypes = {
     about: PropTypes.string.isRequired
 }
 
-// default props
-NavBar.defaultProps = {
-    name: "Dell",
-    about: "About Dell"
-}
+// // default props
+// NavBar.defaultProps = {
+//     name: "Dell",
+//     about: "About Dell"
+// }

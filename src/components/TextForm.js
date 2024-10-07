@@ -16,7 +16,7 @@ export default function TextForm(props) {
         <div>
             <div> {props.heading}</div>
             <div className="mb-3">
-                <label for="myBox" className="form-label"></label>
+                <label htmlFor="myBox" className="form-label"></label>
                 <textarea className="form-control" value={text} onChange={ handleUpperCase} id="myBox" rows="3"></textarea>
             </div>
 
@@ -30,6 +30,6 @@ export default function TextForm(props) {
 TextForm.propTypes = {
     heading: PropTypes.string.isRequired
 }
-TextForm.defaultProps = {
-    heading: "no props passed"
-}
+// TextForm.defaultProps = {
+//     heading: "no props passed"
+// }
