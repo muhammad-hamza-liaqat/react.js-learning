@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "./css.css";
 export default function CounterCard() {
     const [count, setCount] = useState(0);
     const addOneHandler = () => {
@@ -17,8 +18,8 @@ export default function CounterCard() {
             <div className="card w-50">
                 <div className="card-body">
                     <h3 className="card-title">{count}</h3>
-                    <div className="btn btn-primary mx-5" onClick={addOneHandler}>Add by one</div>
-                    <div className="btn btn-warning mx-4" onClick={subtractOneHandler}>Substract by one</div>
+                    <div className="btn btn-primary" onClick={addOneHandler}>Add by one</div>
+                    <div className="btn btn-warning" onClick={subtractOneHandler}>Substract by one</div>
                 </div>
             </div>
         </>
