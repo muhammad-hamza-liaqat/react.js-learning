@@ -5,7 +5,7 @@ export default function AddItem () {
   const [text, setText] = useState('')
   const [showToast, setShowToast] = useState(false)
   const [toastMessage, setToastMessage] = useState('')
-  const [todoItems, setTodoItems] = useState([]) // State to store todo items
+  const [todoItems, setTodoItems] = useState([]) 
 
   useEffect(() => {
     const items = JSON.parse(localStorage.getItem('todoItems')) || []
