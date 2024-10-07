@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import Toaster from './Toaster'
 
-export default function AddItem () {
+export default function AddItem() {
   const [text, setText] = useState('')
   const [showToast, setShowToast] = useState(false)
+  const [toastMessage, setToastMessage] = useState('') 
 
   const addTextHandler = e => {
     e.preventDefault()
@@ -11,8 +12,10 @@ export default function AddItem () {
 
     const existingItems = JSON.parse(localStorage.getItem('todoItems')) || []
     existingItems.push(text)
+
     localStorage.setItem('todoItems', JSON.stringify(existingItems))
 
+    setToastMessage(`${text} Added Successfully in Local storage`) 
     setShowToast(true)
     setTimeout(() => setShowToast(false), 2000)
 
@@ -42,7 +45,7 @@ export default function AddItem () {
         </div>
       </form>
 
-      <Toaster message='Item added to your ToDo list!' show={showToast} />
+      <Toaster message={toastMessage} show={showToast} />
     </>
   )
 }
