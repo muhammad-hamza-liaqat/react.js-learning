@@ -1,4 +1,4 @@
-import CounterCard from "./components/CounterCard"
+import Counter from "./components/Counter"
 import NavBar from "./components/NavBar"
 import "./components/css.css"
 function App() {
@@ -6,7 +6,10 @@ function App() {
     <>
       <NavBar />
       <div className="container">
-        <CounterCard />
+        <Counter />
+        <Counter />
+        <Counter />
+        <Counter />
       </div>
     </>
   )
