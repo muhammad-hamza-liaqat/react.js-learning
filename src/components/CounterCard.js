@@ -22,20 +22,27 @@ export default function CounterCard() {
     // when the count value is increased everytime, the component is re-rendered, the other local variables 
     // loses data when there is re render. useRef allows us to persist the state. such as below.....
     let a = useRef(0)
+    // if the value is changes of ref, then it value will not be initialized again
+    a.current = a.current + 1
+
     useEffect(() => {
         console.log(`Component redendered again`)
+        console.log(`value of inside ${a.current}`)
+        btnRef.current.style.backgroundColor = "green"
     }, [])
-    a.current = a.current + 1
-    console.log(`value of ${a.current}`)
+
+    console.log(`value of outside ${a.current}`)
+    // directly manipulation DOM via ref
+    const btnRef = useRef();
 
     return (
         <>
             <div className="card w-50">
                 <div className="card-body">
                     <h3 className="card-title">{count}</h3>
-                    <div className="btn btn-primary" onClick={addOneHandler}>Add by one</div>
+                    <div className="btn btn-primary"  onClick={addOneHandler}>Add by one</div>
                     <div className="btn btn-warning" onClick={subtractOneHandler}>Substract by one</div>
-                    <div className="btn btn-danger" onClick={resetHandler}>Reset</div>
+                    <div className="btn btn-danger" ref={btnRef} onClick={resetHandler}>Reset</div>
                 </div>
             </div>
         </>
