@@ -4,7 +4,7 @@ import "./components/css.css"
 function App() {
   return (
     <>
-      <NavBar />
+      <NavBar name="Add to Cart"/>
       <Items />
     </>
   )
