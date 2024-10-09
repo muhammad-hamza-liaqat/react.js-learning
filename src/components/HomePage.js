@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import { TextureLoader } from 'three';
 import { useLoader } from '@react-three/fiber';
-import * as THREE from 'three';
+// import * as THREE from 'three';
 
 const Earth = () => {
   const texture = useLoader(TextureLoader, '/a2.jpg');
