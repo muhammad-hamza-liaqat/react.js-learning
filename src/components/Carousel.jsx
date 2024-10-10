@@ -1,18 +1,20 @@
 import React from 'react'
-
+import image1 from "../assets/CarouselAssets/image1.jpg"
+import image2 from "../assets/CarouselAssets/image2.jpg"
+import image3 from "../assets/CarouselAssets/image3.jpg"
 export default function Carousel() {
     return (
         <>
-            <div id="carouselExample" className="carousel slide">
+            <div id="carouselExample" className="carousel slide" style={{ maxWidth: "500px", margin: "auto"}}>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src="..." className="d-block w-100" alt="..."/>
+                        <img src={image1} className="d-block w-100" alt="..."/>
                     </div>
                     <div className="carousel-item">
-                        <img src="..." className="d-block w-100" alt="..."/>
+                        <img src={image2} className="d-block w-100" alt="..." />
                     </div>
                     <div className="carousel-item">
-                        <img src="..." className="d-block w-100" alt="..."/>
+                        <img src={image3} className="d-block w-100" alt="..." />
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
