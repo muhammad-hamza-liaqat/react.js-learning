@@ -13,22 +13,22 @@ export default function ReducerCounter() {
                     return { ...state, counter: state.counter - 1 }
                 }
             case "MODE":
-                console.log("inside mode click")
-                return { ...state, mode: state.mode === "development" ? "production" : "development" }
+                // console.log("inside mode click")
+                return { ...state, mode: state.mode === "Development" ? "Production" : "Development" }
             default:
                 return state
         }
     }
     const [state, dispatch] = useReducer(reducer, {
         counter: 0,
-        mode: 'development'
+        mode: 'Development'
     })
     return (
         <>
             <div className='card w-50'>
                 <div className='card-body'>
                     <h5 className='card-title'>{state.counter}</h5>
-                    <h5 className='card-title'>mode:{state.mode}</h5>
+                    <h5 className='card-title'>mode: {state.mode}</h5>
                     <div className='btn btn-primary mx-3' onClick={() => {
                         dispatch({ type: "INC" })
                     }}>Add 1</div>
