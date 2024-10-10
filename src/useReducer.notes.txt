@@ -1,0 +1,5 @@
+the use Reducers is used for state management in react.js
+it is an alternative to useState.
+
+difference between useState and useReducer?
+useState is built using useReducer
